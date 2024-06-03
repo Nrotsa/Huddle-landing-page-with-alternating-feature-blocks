@@ -1,0 +1,72 @@
+$pink: hsl(322, 100%, 66%);
+$pink-opacity: hsl(322, 100%, 66%, 0.7);
+$pale-cyan: hsl(193, 100%, 96%);
+$dark-cyan: hsl(192, 100%, 9%);
+$gray-blue: hsl(208, 11%, 55%);
+$white: rgb(241, 234, 234);
+$font-weights: (
+  "regular": 400,
+  "semi-bold": 600,
+  "bold": 700,
+);
+$font-families: (
+  "regular": "Open Sans",
+  "headings": "Poppins",
+);
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+@function font-family($weight-name) {
+  @return map-get($font-families, $weight-name);
+}
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin section-styles {
+  @include flexCenter(row);
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  color: $dark-cyan;
+  img {
+    width: 100%;
+  }
+  div {
+    max-width: 29rem;
+    width: 100%;
+  }
+  .headliner {
+    font-weight: weight("semi-bold");
+    font-family: font-family("headings");
+    font-size: 2rem;
+    max-width: 23rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .description {
+    font-weight: weight("regular");
+    font-family: font-family("regular");
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+@mixin pink-button {
+  color: $white;
+  background-color: $pink;
+  border: none;
+  border-radius: 25px;
+  font-weight: weight("bold");
+  font-size: 0.8rem;
+  padding: 0.9rem;
+  width: 100%;
+  max-width: 250px;
+  @include flexCenter(row);
+  transition: all 0.2s;
+  &:hover {
+    cursor: pointer;
+    background-color: $pink-opacity;
+  }
+}

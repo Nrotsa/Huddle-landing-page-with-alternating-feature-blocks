@@ -1,0 +1,142 @@
+.bot-section {
+  background-color: $dark-cyan;
+  color: $pale-cyan;
+  position: relative;
+  margin-top: 10rem;
+  padding: 5rem;
+
+  .logo-img path {
+    fill: white;
+  }
+
+  @media (max-width: 800px) {
+    img {
+      width: 20%;
+    }
+  }
+  .half-navbar {
+    background-color: $white;
+    color: $dark-cyan;
+    position: absolute;
+    transform: translateX(-50%);
+    top: -50%;
+    left: 50%;
+    @include flexCenter(column);
+    max-width: 30rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 15px;
+    .navbar-headliner {
+      font-weight: weight("semi-bold");
+      font-family: font-family("headings");
+      font-size: 1.2rem;
+    }
+    button {
+      @include pink-button;
+    }
+    @media (max-width: 800px) {
+      top: -30%;
+      width: 80%;
+    }
+  }
+  .left-bot {
+    @include flexCenter(row);
+    align-items: flex-start;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 2rem;
+    height: 8rem;
+
+    .left {
+      max-width: 33%;
+      @include flexCenter(column);
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 100%;
+
+      img {
+        width: 18px;
+      }
+      div {
+        display: flex;
+        align-items: center;
+
+        gap: 1rem;
+
+        p {
+          font-size: 0.8rem;
+        }
+      }
+      @media (max-width: 800px) {
+        gap: 2rem;
+        max-width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+    .mid-grid {
+      max-width: 33%;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 100px 100px;
+      column-gap: 2rem;
+
+      p {
+        font-size: 0.8rem;
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+      @media (max-width: 800px) {
+        display: grid;
+        grid-template-columns: 100px;
+        max-width: 100%;
+        justify-content: start;
+      }
+    }
+    .right-bot {
+      max-width: 33%;
+      width: 100%;
+      @include flexCenter(column);
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 100%;
+      p {
+        font-size: 0.8rem;
+      }
+      .icons-box {
+        @include flexCenter(row);
+        gap: 1rem;
+        svg path {
+          transition: all 0.2s;
+          fill: $pale-cyan;
+          cursor: pointer;
+          &:hover {
+            fill: $pink;
+          }
+        }
+      }
+      @media (max-width: 800px) {
+        max-width: 100%;
+        gap: 1rem;
+
+        .icons-box {
+          @include flexCenter(row);
+          align-items: center;
+
+          width: 100%;
+        }
+      }
+    }
+    @media (max-width: 800px) {
+      @include flexCenter(column);
+      align-items: flex-start;
+      height: 100%;
+    }
+  }
+}

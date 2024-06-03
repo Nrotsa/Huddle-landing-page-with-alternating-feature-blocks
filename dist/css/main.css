@@ -1,0 +1,414 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem;
+}
+
+.bot-section {
+  background-color: hsl(192, 100%, 9%);
+  color: hsl(193, 100%, 96%);
+  position: relative;
+  margin-top: 10rem;
+  padding: 5rem;
+}
+.bot-section .logo-img path {
+  fill: white;
+}
+@media (max-width: 800px) {
+  .bot-section img {
+    width: 20%;
+  }
+}
+.bot-section .half-navbar {
+  background-color: rgb(241, 234, 234);
+  color: hsl(192, 100%, 9%);
+  position: absolute;
+  transform: translateX(-50%);
+  top: -50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 30rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  padding: 2rem;
+  gap: 1rem;
+  border-radius: 15px;
+}
+.bot-section .half-navbar .navbar-headliner {
+  font-weight: 600;
+  font-family: "Poppins";
+  font-size: 1.2rem;
+}
+.bot-section .half-navbar button {
+  color: rgb(241, 234, 234);
+  background-color: hsl(322, 100%, 66%);
+  border: none;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.9rem;
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  transition: all 0.2s;
+}
+.bot-section .half-navbar button:hover {
+  cursor: pointer;
+  background-color: hsla(322, 100%, 66%, 0.7);
+}
+@media (max-width: 800px) {
+  .bot-section .half-navbar {
+    top: -30%;
+    width: 80%;
+  }
+}
+.bot-section .left-bot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+  height: 8rem;
+}
+.bot-section .left-bot .left {
+  max-width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+}
+.bot-section .left-bot .left img {
+  width: 18px;
+}
+.bot-section .left-bot .left div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.bot-section .left-bot .left div p {
+  font-size: 0.8rem;
+}
+@media (max-width: 800px) {
+  .bot-section .left-bot .left {
+    gap: 2rem;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+.bot-section .left-bot .mid-grid {
+  max-width: 33%;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100px 100px;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.bot-section .left-bot .mid-grid p {
+  font-size: 0.8rem;
+}
+.bot-section .left-bot .mid-grid p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .bot-section .left-bot .mid-grid {
+    display: grid;
+    grid-template-columns: 100px;
+    max-width: 100%;
+    justify-content: start;
+  }
+}
+.bot-section .left-bot .right-bot {
+  max-width: 33%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+}
+.bot-section .left-bot .right-bot p {
+  font-size: 0.8rem;
+}
+.bot-section .left-bot .right-bot .icons-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+.bot-section .left-bot .right-bot .icons-box svg path {
+  transition: all 0.2s;
+  fill: hsl(193, 100%, 96%);
+  cursor: pointer;
+}
+.bot-section .left-bot .right-bot .icons-box svg path:hover {
+  fill: hsl(322, 100%, 66%);
+}
+@media (max-width: 800px) {
+  .bot-section .left-bot .right-bot {
+    max-width: 100%;
+    gap: 1rem;
+  }
+  .bot-section .left-bot .right-bot .icons-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .bot-section .left-bot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+  }
+}
+
+body {
+  color: hsl(192, 100%, 9%);
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 65rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  max-width: 65rem;
+  width: 100%;
+  margin: 0 auto;
+  background: url("/dist/images/bg-hero-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+header img {
+  width: 30%;
+}
+header button {
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 15px;
+  font-weight: 700;
+  font-family: "Open Sans";
+  font-size: 0.9rem;
+  background-color: rgb(241, 234, 234);
+  transition: all 0.2s;
+}
+header button:hover {
+  color: hsl(208, 11%, 55%);
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  header button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+  header img {
+    width: 40%;
+  }
+}
+
+section:first-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  color: hsl(192, 100%, 9%);
+  margin-bottom: 2rem;
+}
+section:first-of-type img {
+  width: 100%;
+}
+section:first-of-type div {
+  max-width: 29rem;
+  width: 100%;
+}
+section:first-of-type .headliner {
+  font-weight: 600;
+  font-family: "Poppins";
+  font-size: 2rem;
+  max-width: 23rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+section:first-of-type .description {
+  font-weight: 400;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+section:first-of-type button {
+  color: rgb(241, 234, 234);
+  background-color: hsl(322, 100%, 66%);
+  border: none;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.9rem;
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  transition: all 0.2s;
+}
+section:first-of-type button:hover {
+  cursor: pointer;
+  background-color: hsla(322, 100%, 66%, 0.7);
+}
+@media (max-width: 1100px) {
+  section:first-of-type .headliner {
+    font-size: 1.3rem;
+  }
+  section:first-of-type .description {
+    font-size: 0.8rem;
+  }
+  section:first-of-type div {
+    max-width: 50%;
+  }
+}
+@media (max-width: 800px) {
+  section:first-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  section:first-of-type div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 20rem;
+    width: 100%;
+  }
+  section:first-of-type .headliner {
+    max-width: 15rem;
+  }
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  color: hsl(192, 100%, 9%);
+  justify-content: flex-end;
+  gap: 10rem;
+  margin-top: 5rem;
+}
+section img {
+  width: 100%;
+}
+section div {
+  max-width: 29rem;
+  width: 100%;
+}
+section .headliner {
+  font-weight: 600;
+  font-family: "Poppins";
+  font-size: 2rem;
+  max-width: 23rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+section .description {
+  font-weight: 400;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+section img {
+  width: 100%;
+}
+section div {
+  max-width: 26rem;
+}
+section .headliner {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+section .description {
+  font-size: 0.9rem;
+  color: hsl(208, 11%, 55%);
+}
+@media (max-width: 800px) {
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+  section div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 20rem;
+    width: 100%;
+  }
+  section .headliner {
+    max-width: 15rem;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  color: rgb(241, 234, 234);
+  transform: translateX(-50%);
+}
+footer p {
+  font-size: 0.8rem;
+}/*# sourceMappingURL=main.css.map */
